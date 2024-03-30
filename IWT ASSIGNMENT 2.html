@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* CSS for styling the layout, fonts, colors, and spacing */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Thank you for visiting my website. Explore to learn more about me and my work.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I am Kavya Singh, an engineering student at Banasthali University. I am currently learning  HTML, CSS, JavaScript, and various web development frameworks. My interests include creating responsive and user-friendly websites that provide an enjoyable user experience. I have also participated in several hackathons and coding competitions, where I won awards for my innovative projects.</p>
+            <p>Technical Skills:
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="content">
+            <h2>Portfolio</h2>
+            <p>Here are some of my recent projects:</p>
+            <div class="project">
+                <h3>Project 1: Website Redesign</h3>
+                <p>A redesign of a local business website to improve user experience and increase conversion rates.</p>
+                <!-- Add images, descriptions, and links to your projects -->
+            </div>
+            <div class="project">
+                <h3>Project 2: E-commerce Platform</h3>
+                <p>Developed an e-commerce platform from scratch using React and Node.js, providing a seamless shopping experience for users.</p>
+                <!-- Add images, descriptions, and links to your projects -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for adding interactivity
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // JavaScript for form submission
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // You can add form submission logic here, such as sending an email or storing the message in a database
+            alert('Your message has been submitted!');
+            this.reset(); // Reset the form after submission
+        });
+    </script>
+</body>
+</html>
